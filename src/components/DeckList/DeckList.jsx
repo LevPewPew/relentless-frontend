@@ -14,7 +14,7 @@ function DeckList() {
           const { question, answer } = card;
           return (
             <Card
-              index={index}
+              key={index}
               question={question}
               answer={answer}
             />

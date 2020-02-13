@@ -1,20 +1,22 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
-import { DeckList, CardSubmitBtn } from './components';
+import { CardForm, DeckList } from './components';
 import './App.scss';
+
+const webServer = process.env.REACT_APP_BACKEND_URL;
 
 function App() {
   const dispatch = useDispatch();
-
+  
   useEffect(() => {
-    async function getCardsData() {
-      let res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/cards`);
+    const getCardsData = async () => {
+      let res = await axios.get(`${webServer}/cards`);
       
       return res;
     }
 
-    async function setInitialData() {
+    const setInitialData = async () => {
       try {
         let res = await getCardsData();
         dispatch({ type: 'SET_CARDS_DATA', newCardsData: res.data });
@@ -31,7 +33,7 @@ function App() {
       <h1>Relentless</h1>
       <h2>by Lev</h2>
       <DeckList />
-      <CardSubmitBtn />
+      <CardForm />
     </div>
   );
 }

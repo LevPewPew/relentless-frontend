@@ -3,7 +3,7 @@ import './CardSubmitBtn.scss';
 
 function CardSubmitBtn() {
   return (
-    <button className="CardSubmitBtn btn">Add Card</button>
+    <button className="CardSubmitBtn btn" type="submit">Add Card</button>
   );
 }
 
