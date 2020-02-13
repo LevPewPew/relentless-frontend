@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 
 function App() {
-  const [data, setData] = useState(null);
+  const [ data, setData ] = useState(null);
 
   useEffect(() => {
-    (async () => {
-      const res = await Axios.get(`${process.env.REACT_APP_BACKEND_URL}/categories`);
+    function getData() {
+      let res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/categories`);
 
-      setData(res.data);
-    })();
+      return res;
+    }
+    
+    let res = getData();
+    setData(res.data);
   }, []);
 
   return (
