@@ -1,35 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import axios from 'axios';
+import { DeckList } from './components';
 
 function App() {
-  const [ data, setData ] = useState(null);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    async function getData() {
-      let res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/categories`);
-
+    async function getCardsData() {
+      let res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/cards`);
+      
       return res;
     }
-    
-    let res = getData();
-    setData(res.data);
+
+    async function setInitialData() {
+      try {
+        let res = await getCardsData();
+        dispatch({ type: 'SET_CARDS_DATA', newCardsData: res.data });
+      } catch (err) {
+        console.log(err);
+      }
+    }
+
+    setInitialData();
   }, []);
 
   return (
     <div className="App">
-      <h1>Hello World</h1>
-      <h2>All Categories</h2>
-      <div>
-        {
-          data ?
-          data.map((category, index) => {
-            return (
-              <div key={index}>{category.title}</div>
-            )
-          }) :
-          <div>empty, no categories</div>
-        }
-      </div>
+      <h1>Relentless</h1>
+      <h2>by Lev</h2>
+      <DeckList />
     </div>
   );
 }
