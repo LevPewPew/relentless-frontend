@@ -1,9 +1,14 @@
 import React from 'react';
 import './Card.scss';
 
-function Card() {
+function Card(props) {
+  const { index, question, answer } = props;
+
   return (
-    <div>Card PLACEHOLDER</div>
+    <article className="Card">
+      <p key={index}>{question}</p>
+      <p key={index}>{answer}</p>
+    </article>
   );
 }
 

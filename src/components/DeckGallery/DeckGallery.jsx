@@ -3,7 +3,7 @@ import './DeckGallery.scss';
 
 function DeckGallery() {
   return (
-    <div>DeckGallery PLACEHOLDER</div>
+    <section className="DeckGallery">DeckGallery PLACEHOLDER</section>
   );
 }
 

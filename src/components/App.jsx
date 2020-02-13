@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
-import { DeckList } from './components';
+import { DeckList, CardSubmitBtn } from './components';
+import './App.scss';
 
 function App() {
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ function App() {
       <h1>Relentless</h1>
       <h2>by Lev</h2>
       <DeckList />
+      <CardSubmitBtn />
     </div>
   );
 }
