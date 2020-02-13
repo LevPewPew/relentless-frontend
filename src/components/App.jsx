@@ -5,7 +5,7 @@ function App() {
   const [ data, setData ] = useState(null);
 
   useEffect(() => {
-    function getData() {
+    async function getData() {
       let res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/categories`);
 
       return res;
