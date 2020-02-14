@@ -10,7 +10,7 @@ function cardsReducer(state = initialState, action) {
       newState = { ...state, cardsData: action.newCardsData };
       break;
     case 'APPEND_CARDS_DATA':
-      let newCardsData = [...state.cardsData, ...action.newCards];
+      let newCardsData = [ ...state.cardsData, ...action.newCards ];
       newState = { ...state, cardsData: newCardsData };
       break;
     default:

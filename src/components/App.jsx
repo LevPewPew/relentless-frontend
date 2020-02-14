@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import axios from 'axios';
+import Axios from 'axios';
 import { CardForm, DeckList } from './components';
 import './App.scss';
 
@@ -11,7 +11,7 @@ function App() {
   
   useEffect(() => {
     const getCardsData = async () => {
-      let res = await axios.get(`${webServer}/cards`);
+      let res = await Axios.get(`${webServer}/cards`);
       
       return res;
     }

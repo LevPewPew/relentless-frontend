@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
+import Axios from 'axios';
 import { CardSubmitBtn } from '../components';
 
 const webServer = process.env.REACT_APP_BACKEND_URL;
@@ -12,7 +12,7 @@ function CardForm() {
 
   const onSubmit = (data) => {
     const postCardsData = async (data) => {
-      let res = await axios.post(`${webServer}/cards`, data);
+      let res = await Axios.post(`${webServer}/cards`, data);
       
       return res;
     }
