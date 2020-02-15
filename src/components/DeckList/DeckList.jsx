@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Card } from '../components';
+import './DeckList.scss';
 
 function DeckList() {
   const deck = useSelector((state) => state.cardsReducer.cardsData)
