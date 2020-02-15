@@ -42,4 +42,4 @@ Ready to start writing?  Either start changing stuff on the left or
 [Marked]: https://github.com/markedjs/marked/
 [Markdown]: http://daringfireball.net/projects/markdown/`
 
-export {sampleMarkdown};
+export { sampleMarkdown };

@@ -1,10 +1,12 @@
 {
-  "name": "mern-boiler-frontend",
+  "name": "relentless-frontend",
   "version": "1.0.0",
-  "description": "A boiler plate for a react frontend in a MERN app. Some values are placeholders and should be removed as appropriate.",
+  "description": "A flashcard app for developers. React frontend",
   "main": "index.js",
   "dependencies": {
     "axios": "^0.19.2",
+    "interweave": "^12.2.1",
+    "marked": "^0.8.0",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
