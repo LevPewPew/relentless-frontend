@@ -8,4 +8,11 @@
   @import '../styles/buttons';
   @import '../styles/links';
   @import '../styles/fields';
+
+  // components
+  @import '../components/Card/Card';
+  @import '../components/CardForm/CardForm';
+  @import '../components/CardSubmitBtn/CardSubmitBtn';
+  @import '../components/DeckGallery/DeckGallery';
+  @import '../components/DeckList/DeckList';
 }

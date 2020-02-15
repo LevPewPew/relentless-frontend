@@ -1,5 +1,4 @@
 import React from 'react';
-import './DeckGallery.scss';
 
 function DeckGallery() {
   return (
