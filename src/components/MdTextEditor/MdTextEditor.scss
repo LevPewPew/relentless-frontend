@@ -1,0 +1,16 @@
+.MdTextEditor {
+  display: flex;
+  height: 400px;
+
+  textarea {
+    width: 50%;
+    height: 100%;
+    border: 3px dashed red;
+  }
+
+  .md-view {
+    width: 50%;
+    height: 100%;
+    border: 3px dashed blue;
+  }
+}

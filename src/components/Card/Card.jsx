@@ -14,14 +14,14 @@ function Card(props) {
 
   console.log(question);
   // if (question.includes('```')) {
-    let newQuestion0 = question.split('```')[0];
-    let newQuestion1 = question.split('```')[1].trim();
-    let newQuestion2 = question.split('```')[2];
+    // let newQuestion0 = question.split('```')[0];
+    // let newQuestion1 = question.split('```')[1].trim();
+    // let newQuestion2 = question.split('```')[2];
   // }
 
   return (
     <article style={{ border: "3px dashed black", margin: "20px" }} className="Card">
-      <SyntaxHighlighter language="csharp" style={vs2015}>
+      {/* <SyntaxHighlighter language="csharp" style={vs2015}>
         {codeCsharp}
       </SyntaxHighlighter>
       <SyntaxHighlighter language="javascript" style={vs2015}>
@@ -29,9 +29,9 @@ function Card(props) {
       </SyntaxHighlighter>
       <SyntaxHighlighter language="javascript" style={vs2015}>
         {newQuestion1}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter> */}
       {/* <Markup content={html} /> */}
-      {/* <p>{question}</p> */}
+      <p>{question}</p>
       {/* <p style={{ border: "3px dashed red"}}>{newQuestion0}</p>
       <div style={{ border: "3px dashed green"}}>
         <SyntaxHighlighter language="javascript" style={vs2015}>
@@ -39,8 +39,8 @@ function Card(props) {
           {newQuestion1}
         </SyntaxHighlighter>
       </div>
-      <p style={{ border: "3px dashed blue"}}>{newQuestion2}</p>
-      <p>{answer}</p> */}
+      <p style={{ border: "3px dashed blue"}}>{newQuestion2}</p> */}
+      <p>{answer}</p>
     </article>
   );
 }
