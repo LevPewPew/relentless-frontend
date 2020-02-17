@@ -1,16 +1,21 @@
 .MdTextEditor {
   display: flex;
-  height: 400px;
+  flex-direction: column;
 
-  textarea {
-    width: 50%;
-    height: 100%;
-    border: 3px dashed red;
-  }
+  .input-output {
+    display: flex;
+    height: 400px;
 
-  .md-view {
-    width: 50%;
-    height: 100%;
-    border: 3px dashed blue;
+    textarea {
+      width: 50%;
+      height: 100%;
+      border: 3px dashed red;
+    }
+    
+    [class*="md-view"] {
+      width: 50%;
+      height: 100%;
+      border: 3px dashed blue;
+    }
   }
 }

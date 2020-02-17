@@ -12,12 +12,15 @@ const html = Marked(sampleMarkdown);
 function Card(props) {
   const { question, answer } = props;
 
-  console.log(question);
-  // if (question.includes('```')) {
-    // let newQuestion0 = question.split('```')[0];
-    // let newQuestion1 = question.split('```')[1].trim();
-    // let newQuestion2 = question.split('```')[2];
-  // }
+  const splitUpTextAndCode = (text) => {
+    let parsedText = text.split('```');
+    parsedText = parsedText.map((segment, index) => {
+      let isCode = index % 2 === 1 ? true : false;
+      return { text: segment.trim(), code: isCode };
+    })
+
+    return parsedText;
+  }
 
   return (
     <article style={{ border: "3px dashed black", margin: "20px" }} className="Card">
@@ -31,16 +34,33 @@ function Card(props) {
         {newQuestion1}
       </SyntaxHighlighter> */}
       {/* <Markup content={html} /> */}
-      <p>{question}</p>
-      {/* <p style={{ border: "3px dashed red"}}>{newQuestion0}</p>
-      <div style={{ border: "3px dashed green"}}>
-        <SyntaxHighlighter language="javascript" style={vs2015}>
-          {codeJavascript}
-          {newQuestion1}
-        </SyntaxHighlighter>
-      </div>
-      <p style={{ border: "3px dashed blue"}}>{newQuestion2}</p> */}
-      <p>{answer}</p>
+      {/* <p>{question}</p> */}
+      {
+        splitUpTextAndCode(question).map((segment) => {
+          if (segment.code) {
+            return (
+              <SyntaxHighlighter language="javascript" style={vs2015}>
+                {codeJavascript}
+              </SyntaxHighlighter>
+            )
+          } else {
+            return <p style={{ border: "3px dashed red" }}>{segment.text}</p>;
+          }
+        })
+      }
+      {
+        splitUpTextAndCode(answer).map((segment) => {
+          if (segment.code) {
+            return (
+              <SyntaxHighlighter language="javascript" style={vs2015}>
+                {codeJavascript}
+              </SyntaxHighlighter>
+            )
+          } else {
+            return <p style={{ border: "3px dashed red" }}>{segment.text}</p>;
+          }
+        })
+      }
     </article>
   );
 }

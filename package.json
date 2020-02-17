@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "interweave": "^12.2.1",
+    "lodash": "^4.17.15",
     "marked": "^0.8.0",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",

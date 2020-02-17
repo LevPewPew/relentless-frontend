@@ -31,7 +31,10 @@ function CardForm() {
 
   return (
     <form className="CardForm" onSubmit={handleSubmit(onSubmit)}>
-      <textarea name="question" ref={register} rows="10" cols="50" />
+      <MdTextEditor
+        name="question"
+        register={register}
+      />
       <MdTextEditor
         name="answer"
         register={register}
