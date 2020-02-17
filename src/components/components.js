@@ -3,6 +3,7 @@ import CardForm from './CardForm/CardForm';
 import CardSubmitBtn from './CardSubmitBtn/CardSubmitBtn';
 import DeckGallery from './DeckGallery/DeckGallery';
 import DeckList from './DeckList/DeckList';
+import HighlightedMarkdown from './HighlightedMarkdown/HighlightedMarkdown';
 import MdTextEditor from './MdTextEditor/MdTextEditor';
 
 export {
@@ -11,5 +12,6 @@ export {
   CardSubmitBtn,
   DeckGallery,
   DeckList,
+  HighlightedMarkdown,
   MdTextEditor
 }
