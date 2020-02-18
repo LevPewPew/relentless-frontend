@@ -8,6 +8,7 @@ import {
   QuizPage,
   SideBar
 } from './components';
+import { setInitialData } from '../actions/cardsActions';
 import './App.scss';
 
 const webServer = process.env.REACT_APP_BACKEND_URL;
@@ -16,20 +17,20 @@ function App() {
   const dispatch = useDispatch();
   
   useEffect(() => {
-    const getCardsData = async () => {
-      let res = await axios.get(`${webServer}/cards`);
+    // const getCardsData = async () => {
+    //   let res = await axios.get(`${webServer}/cards`);
       
-      return res;
-    }
+    //   return res;
+    // }
 
-    const setInitialData = async () => {
-      try {
-        let res = await getCardsData();
-        dispatch({ type: 'SET_CARDS_DATA', newCardsData: res.data });
-      } catch (err) {
-        console.log(err);
-      }
-    }
+    // const setInitialData = async () => {
+    //   try {
+    //     let res = await getCardsData();
+    //     dispatch({ type: 'SET_CARDS_DATA', newCardsData: res.data });
+    //   } catch (err) {
+    //     console.log(err);
+    //   }
+    // }
 
     setInitialData();
   }, []);

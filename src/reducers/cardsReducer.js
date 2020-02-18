@@ -1,5 +1,6 @@
 const initialState = {
-  cardsData: []
+  cardsData: [],
+  deckPosition: 0
 };
 
 function cardsReducer(state = initialState, action) {

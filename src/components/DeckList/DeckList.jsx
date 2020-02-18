@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Card } from '../components';
 
 function DeckList() {
-  const deck = useSelector((state) => state.cardsReducer.cardsData)
+  const deck = useSelector((state) => state.cardsReducer.cardsData);
 
   return (
     <section className="DeckList">
