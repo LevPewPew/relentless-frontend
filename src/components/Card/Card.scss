@@ -1,0 +1,13 @@
+@import '../styles/colors';
+
+.Card {
+  border-radius: 5px;
+}
+
+.front-displayed {
+  border: solid 2px $unyieldingLamp;
+}
+
+.back-displayed {
+  border: solid 2px $immovableObject;
+}
