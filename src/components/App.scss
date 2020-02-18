@@ -10,10 +10,16 @@
   @import '../styles/fields';
 
   // components
+  @import '../components/AccuracyMeter/AccuracyMeter';
   @import '../components/Card/Card';
   @import '../components/CardForm/CardForm';
-  @import '../components/CardSubmitBtn/CardSubmitBtn';
+  @import '../components/ui/CardSubmitBtn/CardSubmitBtn';
+  @import '../components/ConfidenceMeter/ConfidenceMeter';
   @import '../components/DeckGallery/DeckGallery';
   @import '../components/DeckList/DeckList';
-  @import '../components/MdTextEditor/MdTextEditor';
+  @import '../components/layout/Footer/Footer';
+  @import '../components/layout/Header/Header';
+  @import '../components/ui/MdTextEditorField/MdTextEditorField';
+  @import '../components/ui/ScoringBtn/ScoringBtn';
+  @import '../components/layout/SideBar/SideBar';
 }

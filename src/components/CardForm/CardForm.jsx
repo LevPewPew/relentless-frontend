@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { CardSubmitBtn, MdTextEditor } from '../components';
+import { CardSubmitBtn, MdTextEditorField } from '../components';
 
 const webServer = process.env.REACT_APP_BACKEND_URL;
 
@@ -31,11 +31,11 @@ function CardForm() {
 
   return (
     <form className="CardForm" onSubmit={handleSubmit(onSubmit)}>
-      <MdTextEditor
+      <MdTextEditorField
         name="question"
         register={register}
       />
-      <MdTextEditor
+      <MdTextEditorField
         name="answer"
         register={register}
       />

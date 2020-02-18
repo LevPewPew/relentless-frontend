@@ -1,7 +1,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
-import { CardForm, DeckList } from './components';
+import {
+  Footer,
+  Header,
+  HomePage,
+  QuizPage,
+  SideBar
+} from './components';
 import './App.scss';
 
 const webServer = process.env.REACT_APP_BACKEND_URL;
@@ -30,10 +36,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Relentless</h1>
-      <h2>by Lev</h2>
-      <DeckList />
-      <CardForm />
+      <Header />
+      <SideBar />
+      <QuizPage />
+      <Footer />
     </div>
   );
 }

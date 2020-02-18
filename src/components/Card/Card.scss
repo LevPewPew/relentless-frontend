@@ -2,12 +2,14 @@
 
 .Card {
   border-radius: 5px;
+  width: 80%;
+  height: 80%;
 }
 
 .front-displayed {
-  border: solid 2px $unyieldingLamp;
+  border: solid 5px $unyieldingLamp;
 }
 
 .back-displayed {
-  border: solid 2px $immovableObject;
+  border: solid 5px $immovableObject;
 }

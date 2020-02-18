@@ -5,10 +5,18 @@ function Card(props) {
   const { question, answer } = props;
   const [ isFrontSide, setIsFrontSide ] = useState(true);
 
-  let sideDisplayed = isFrontSide ? 'front-displayed' : 'back-displayed' ;
+  let sideDisplayed = isFrontSide ? "front-displayed" : "back-displayed" ;
+
+  const toggleSideDisplayed = () => {
+    if (isFrontSide) {
+      setIsFrontSide(false);
+    } else {
+      setIsFrontSide(true);
+    }
+  }
 
   return (
-    <article className={`Card ${sideDisplayed}`}>
+    <article className={`Card ${sideDisplayed}`} onClick={toggleSideDisplayed}>
       {
         isFrontSide ?
         <HighlightedMarkdown className="front-side"

@@ -22,12 +22,13 @@ function HighlightedMarkdown(props) {
   }
 
   return (
-    splitUpTextAndCode(markdown).map((segment) => {
+    splitUpTextAndCode(markdown).map((segment, index) => {
       let markdown = Marked(segment.text);
 
       if (segment.code) {
         return (
           <SyntaxHighlighter
+          key={index}
             language="javascript"
             style={vs2015}
           >
@@ -37,6 +38,7 @@ function HighlightedMarkdown(props) {
       } else {
         return (
           <Markup
+            key={index}
             content={markdown}
           />
         )

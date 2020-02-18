@@ -2,7 +2,7 @@ import React from 'react';
 import Marked from 'marked';
 import _ from 'lodash';
 
-function MdTextEditor(props) {
+function MdTextEditorField(props) {
   const { name, register } = props;
 
   const updateMdView = (event) => {
@@ -12,7 +12,7 @@ function MdTextEditor(props) {
   }
 
   return (
-    <div className="MdTextEditor">
+    <div className="MdTextEditorField">
       <h2>MARKDOWN EDITOR - {_.upperFirst(name)}</h2>
       <div className="input-output">
         <textarea name={name} ref={register} rows="10" cols="50" onChange={updateMdView} />
@@ -22,4 +22,4 @@ function MdTextEditor(props) {
   );
 }
 
-export default MdTextEditor;
+export default MdTextEditorField;
