@@ -1,4 +1,5 @@
 // pages
+import EditorPage from '../pages/EditorPage/EditorPage';
 import HomePage from '../pages/HomePage/HomePage';
 import QuizPage from '../pages/QuizPage/QuizPage';
 
@@ -19,6 +20,7 @@ import SideBar from './layout/SideBar/SideBar';
 
 export {
   // pages
+  EditorPage,
   HomePage,
   QuizPage,
 

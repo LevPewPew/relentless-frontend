@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import {
   Footer,
   Header,
+  EditorPage,
   HomePage,
   QuizPage,
   SideBar
@@ -29,6 +30,9 @@ function App() {
               </Route>
               <Route path="/quiz">
                 <QuizPage />
+              </Route>
+              <Route path="/editor">
+                <EditorPage />
               </Route>
             </Switch>
           <Footer />

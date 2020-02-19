@@ -14,6 +14,11 @@ function SideBar() {
       >
         QUIZ LINK
       </Link>
+      <Link
+        to="/editor"
+      >
+        EDITOR LINK
+      </Link>
     </nav>
   )
 }
