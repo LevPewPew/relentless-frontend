@@ -1,10 +1,16 @@
 import React from 'react';
-import { AccuracyMeter, CardForm, DeckList } from '../../components/components';
+import { useSelector } from 'react-redux';
+import { AccuracyMeter, Card, CardForm, DeckList } from '../../components/components';
 
 function QuizPage() {
+  const deckPosition = useSelector((state) => state.cardsReducer.deckPosition);
+
   return (
     <main className="QuizPage">
-      <DeckList />
+      {/* <DeckList /> */}
+      <Card
+        deckPosition={deckPosition}
+      />
       <CardForm />
       <AccuracyMeter />
     </main>

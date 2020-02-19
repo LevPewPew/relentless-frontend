@@ -9,13 +9,11 @@ function DeckList() {
     <section className="DeckList">
       {
         deck ?
-        deck.map((card, index) => {
-          const { question, answer } = card;
+        deck.map((_, index) => {
           return (
             <Card
               key={index}
-              question={question}
-              answer={answer}
+              deckPosition={index}
             />
           )
         }) :

@@ -12,7 +12,7 @@ const getCardsData = async () => {
 
 // actions
 const cycleCard = () => {
-    
+  store.dispatch({ type: 'CYCLE_CARD' });
 }
 
 const setInitialData = async () => {

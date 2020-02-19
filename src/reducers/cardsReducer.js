@@ -14,6 +14,9 @@ function cardsReducer(state = initialState, action) {
       let newCardsData = [...state.cardsData, ...action.newCards];
       newState = { ...state, cardsData: newCardsData };
       break;
+    case 'CYCLE_CARD':
+      newState = { ...state, deckPosition: state.deckPosition + 1 };
+      break;
     default:
       newState = { ...state };
   }

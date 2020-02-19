@@ -1,9 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function SideBar() {
   return (
     <nav className="SideBar">
-      <h1>SIDE BAR PLACEHOLDER</h1>
+      <Link
+        to="/"
+      >
+        HOME LINK
+      </Link>
+      <Link
+        to="/quiz"
+      >
+        QUIZ LINK
+      </Link>
     </nav>
   )
 }

@@ -5,8 +5,7 @@ import { Markup } from 'interweave';
 import { vs2015 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 // TODO test, remove
-import { codeCsharp, codeJavascript} from '../../demo/code';
-import { sampleMarkdown } from '../../demo/markdown';
+import { codeJavascript } from '../../demo/code';
 
 function HighlightedMarkdown(props) {
   const { markdown } = props;

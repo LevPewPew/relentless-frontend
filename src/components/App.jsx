@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import {
   Footer,
   Header,
@@ -11,38 +10,42 @@ import {
 import { setInitialData } from '../actions/cardsActions';
 import './App.scss';
 
-const webServer = process.env.REACT_APP_BACKEND_URL;
-
 function App() {
-  const dispatch = useDispatch();
-  
+  const [isLoaded, setIsLoaded] = useState(true);
+
   useEffect(() => {
-    // const getCardsData = async () => {
-    //   let res = await axios.get(`${webServer}/cards`);
-      
-    //   return res;
-    // }
-
-    // const setInitialData = async () => {
-    //   try {
-    //     let res = await getCardsData();
-    //     dispatch({ type: 'SET_CARDS_DATA', newCardsData: res.data });
-    //   } catch (err) {
-    //     console.log(err);
-    //   }
-    // }
-
     setInitialData();
   }, []);
 
-  return (
-    <div className="App">
-      <Header />
-      <SideBar />
-      <QuizPage />
-      <Footer />
-    </div>
-  );
+  if (isLoaded) {
+    return (
+      <div className="App">
+        <BrowserRouter>
+          <Header />
+          <SideBar />
+            <Switch>
+              <Route exact path="/">
+                <HomePage />
+              </Route>
+              <Route path="/quiz">
+                <QuizPage />
+              </Route>
+            </Switch>
+          <Footer />
+        </BrowserRouter>
+      </div>
+    );
+  } else {
+    return (
+      <>
+        <div>LOADING</div>
+        <div>LOADING</div>
+        <div>LOADING</div>
+        <div>LOADING</div>
+        <div>LOADING</div>
+      </>
+    );
+  }
 }
 
 export default App;

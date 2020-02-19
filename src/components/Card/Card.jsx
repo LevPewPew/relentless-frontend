@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { HighlightedMarkdown } from '../components';
 
 function Card(props) {
-  const { question, answer } = props;
+  const { deckPosition } = props;
+  const deck = useSelector((state) => state.cardsReducer.cardsData);
   const [ isFrontSide, setIsFrontSide ] = useState(true);
 
+  let { question, answer } = deck[deckPosition];
   let sideDisplayed = isFrontSide ? "front-displayed" : "back-displayed" ;
 
   const toggleSideDisplayed = () => {
