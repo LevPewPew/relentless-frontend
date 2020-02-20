@@ -15,16 +15,17 @@ const cycleCard = () => {
   store.dispatch({ type: 'CYCLE_CARD' });
 }
 
-const setInitialData = async () => {
-  try {
-    let res = await getCardsData();
-    store.dispatch({ type: 'SET_CARDS_DATA', newCardsData: res.data });
-  } catch (err) {
-    console.log(err);
-  }
+const setIsCardsDataLoaded = async (bool) => {
+  store.dispatch({ type: 'SET_IS_CARDS_DATA_LOADED', newIsCardsDataLoaded: bool });
+}
+
+const refreshCardsData = async () => {
+  let res = await getCardsData();
+  store.dispatch({ type: 'SET_CARDS_DATA', newCardsData: res.data });
 }
 
 export {
   cycleCard,
-  setInitialData
+  refreshCardsData,
+  setIsCardsDataLoaded
 }

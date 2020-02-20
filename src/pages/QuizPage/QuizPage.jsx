@@ -10,7 +10,6 @@ function QuizPage() {
       <Card
         deckPosition={deckPosition}
       />
-
       <AccuracyMeter />
     </main>
   )

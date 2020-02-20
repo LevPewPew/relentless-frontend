@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import {
   Footer,
@@ -8,17 +9,26 @@ import {
   QuizPage,
   SideBar
 } from './components';
-import { setInitialData } from '../actions/cardsActions';
+import { refreshCardsData } from '../actions/cardsActions';
 import './App.scss';
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(true);
+  const [ isAllDataLoaded, setIsAllDataLoaded ] = useState(false);
 
   useEffect(() => {
-    setInitialData();
+    const getAllData = async () => {
+      try {
+        await refreshCardsData();
+        setIsAllDataLoaded(true);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+
+    getAllData();
   }, []);
 
-  if (isLoaded) {
+  if (isAllDataLoaded) {
     return (
       <div className="App">
         <BrowserRouter>

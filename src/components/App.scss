@@ -22,4 +22,8 @@
   @import '../components/ui/MdTextEditorField/MdTextEditorField';
   @import '../components/ui/ScoringBtn/ScoringBtn';
   @import '../components/layout/SideBar/SideBar';
+
+  [class*="Page"] {
+    margin: 40px 0;
+  }
 }
