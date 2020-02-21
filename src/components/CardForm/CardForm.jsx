@@ -8,9 +8,9 @@ const webServer = process.env.REACT_APP_BACKEND_URL;
 
 function CardForm() {
   const dispatch = useDispatch();
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     const postCardsData = async (data) => {
       let res = await axios.post(`${webServer}/cards`, data);
       
@@ -22,7 +22,7 @@ function CardForm() {
     }
 
     try {
-      postCardsData(data);
+      await postCardsData(data);
       setCardsData(data);
     } catch (err) {
       console.log(err);

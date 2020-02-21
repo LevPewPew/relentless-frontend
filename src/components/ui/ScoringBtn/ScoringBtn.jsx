@@ -1,5 +1,5 @@
 import React from 'react';
-import { cycleCard } from '../../../actions/cardsActions';
+import { cycleCard } from '../../../store/actions/cardsActions';
 
 function ScoringBtn() {
   return (

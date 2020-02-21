@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import {
   Footer,
@@ -9,7 +8,7 @@ import {
   QuizPage,
   SideBar
 } from './components';
-import { refreshCardsData } from '../actions/cardsActions';
+import { refreshCardsData } from '../store/actions/cardsActions';
 import './App.scss';
 
 function App() {
