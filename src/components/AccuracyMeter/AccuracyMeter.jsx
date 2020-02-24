@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScoringBtn } from '../components';
+import { AccuracyBtn } from '../components';
 
 function AccuracyMeter() {
   return (

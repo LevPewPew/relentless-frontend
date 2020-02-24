@@ -4,6 +4,7 @@ import HomePage from '../pages/HomePage/HomePage';
 import QuizPage from '../pages/QuizPage/QuizPage';
 
 // components
+import AccuracyBtn from './ui/AccuracyBtn/AccuracyBtn';
 import AccuracyMeter from './AccuracyMeter/AccuracyMeter';
 import Card from './Card/Card';
 import CardForm from './CardForm/CardForm';
@@ -15,7 +16,6 @@ import Footer from './layout/Footer/Footer';
 import Header from './layout/Header/Header';
 import HighlightedMarkdown from './HighlightedMarkdown/HighlightedMarkdown';
 import MdTextEditorField from './ui/MdTextEditorField/MdTextEditorField';
-import ScoringBtn from './ui/ScoringBtn/ScoringBtn';
 import SideBar from './layout/SideBar/SideBar';
 
 export {
@@ -25,6 +25,7 @@ export {
   QuizPage,
 
   // components
+  AccuracyBtn,
   AccuracyMeter,
   Card,
   CardForm,
@@ -36,6 +37,5 @@ export {
   Header,
   HighlightedMarkdown,
   MdTextEditorField,
-  ScoringBtn,
   SideBar
 }
