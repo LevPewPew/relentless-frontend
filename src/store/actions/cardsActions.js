@@ -11,7 +11,7 @@ const getCardsData = async () => {
 }
 
 // actions
-const cycleCard = () => {
+const cycleCard = async () => {
   store.dispatch({ type: 'CYCLE_CARD' });
 }
 
@@ -22,6 +22,10 @@ const setIsCardsDataLoaded = async (bool) => {
 const refreshCardsData = async () => {
   let res = await getCardsData();
   store.dispatch({ type: 'SET_CARDS_DATA', newCardsData: res.data });
+}
+
+const moveCardToPile = async () => {
+  
 }
 
 export {
