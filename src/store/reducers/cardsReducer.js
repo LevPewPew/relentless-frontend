@@ -29,7 +29,7 @@ function cardsReducer(state = initialState, action) {
       newState = { ...state, cardsData: action.newCardsData };
       break;
     case 'APPEND_CARDS_DATA':
-      let newCardsData = [ ...state.cardsData, ...action.newCards ];
+      let newCardsData = [ ...state.cardsData, action.newCard ];
       newState = { ...state, cardsData: newCardsData };
       break;
     case 'SET_IS_DECKS_DATA_LOADED':
@@ -39,7 +39,7 @@ function cardsReducer(state = initialState, action) {
       newState = { ...state, decksData: action.newDecksData };
       break;
     case 'APPEND_DECKS_DATA':
-      let newDecksData = [ ...state.decksData, ...action.newDecks ];
+      let newDecksData = [ ...state.decksData, action.newDecks ];
       newState = { ...state, decksData: newDecksData };
       break;
     case 'CYCLE_CARD':

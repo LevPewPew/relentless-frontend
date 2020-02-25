@@ -1,14 +1,11 @@
 import React from 'react';
-import { CardForm, DeckList } from '../../components/components';
+import { CardForm, CardList, DeckForm } from '../../components/components';
 
 function EditorPage() {
   return (
     <main className="EditorPage">
-      <p>EditorPage PLACEHOLDER</p>
-      <p>EditorPage PLACEHOLDER</p>
-      <p>EditorPage PLACEHOLDER</p>
-      <p>EditorPage PLACEHOLDER</p>
-      <DeckList />
+      <CardList />
+      <DeckForm />
       <CardForm />
     </main>
   )

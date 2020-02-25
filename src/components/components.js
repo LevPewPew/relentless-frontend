@@ -8,8 +8,11 @@ import AccuracyBtn from './ui/AccuracyBtn/AccuracyBtn';
 import AccuracyMeter from './AccuracyMeter/AccuracyMeter';
 import Card from './Card/Card';
 import CardForm from './CardForm/CardForm';
-import CardSubmitBtn from './ui/CardSubmitBtn/CardSubmitBtn';
+import CardGallery from './CardGallery/CardGallery';
+import CardList from './CardList/CardList';
+import SubmitBtn from './ui/SubmitBtn/SubmitBtn';
 import ConfidenceMeter from './ConfidenceMeter/ConfidenceMeter';
+import DeckForm from './DeckForm/DeckForm';
 import DeckGallery from './DeckGallery/DeckGallery';
 import DeckList from './DeckList/DeckList';
 import Footer from './layout/Footer/Footer';
@@ -29,13 +32,16 @@ export {
   AccuracyMeter,
   Card,
   CardForm,
-  CardSubmitBtn,
+  CardGallery,
+  CardList,
   ConfidenceMeter,
+  DeckForm,
   DeckGallery,
   DeckList,
   Footer,
   Header,
   HighlightedMarkdown,
   MdTextEditorField,
-  SideBar
+  SideBar,
+  SubmitBtn
 }

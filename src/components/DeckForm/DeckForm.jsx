@@ -6,31 +6,32 @@ import { SubmitBtn, MdTextEditorField } from '../components';
 
 const webServer = process.env.REACT_APP_BACKEND_URL;
 
-function CardForm() {
+function DeckForm() {
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
 
   const onSubmit = async (data) => {
-    const postCardsData = async (data) => {
-      let res = await axios.post(`${webServer}/cards`, data);
+    const postDecksData = async (data) => {
+      let res = await axios.post(`${webServer}/decks`, data);
       
       return res;
     }
 
-    const setCardsData = (newCard) => {
-      dispatch({ type: 'APPEND_CARDS_DATA', newCard: newCard });
+    const setDecksData = (newDecks) => {
+      dispatch({ type: 'APPEND_DECKS_DATA', newDecks: [newDecks] });
     }
 
     try {
-      await postCardsData(data);
-      setCardsData(data);
+      await postDecksData(data);
+      setDecksData(data);
     } catch (err) {
       console.log(err);
     }
   }
 
   return (
-    <form className="CardForm" onSubmit={handleSubmit(onSubmit)}>
+    // TODO change these fields to be normal input and a textarea
+    <form className="DeckForm" onSubmit={handleSubmit(onSubmit)}>
       <MdTextEditorField
         name="question"
         register={register}
@@ -41,10 +42,10 @@ function CardForm() {
       />
 
       <SubmitBtn
-        text="Add Card"
+        text="Create Deck"
       />
     </form>
   );
 }
 
-export default CardForm;
+export default DeckForm;
