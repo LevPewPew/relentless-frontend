@@ -17,7 +17,7 @@ const initialState = {
 //   pile5: [],
 // }
 
-function cardsReducer(state = initialState, action) {
+function flashCardsReducer(state = initialState, action) {
   let newState = {};
 
   switch (action.type) {
@@ -56,4 +56,4 @@ function cardsReducer(state = initialState, action) {
   return newState;
 }
 
-export default cardsReducer;
+export default flashCardsReducer;

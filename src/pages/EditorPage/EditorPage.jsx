@@ -1,12 +1,18 @@
 import React from 'react';
-import { CardForm, CardList, DeckForm } from '../../components/components';
+import {
+  CardForm,
+  CardList,
+  DeckForm,
+  DeckList
+} from '../../components/components';
 
 function EditorPage() {
   return (
     <main className="EditorPage">
-      <CardList />
+      {/* <CardList /> */}
+      <DeckList />
       <DeckForm />
-      <CardForm />
+      {/* <CardForm /> */}
     </main>
   )
 }

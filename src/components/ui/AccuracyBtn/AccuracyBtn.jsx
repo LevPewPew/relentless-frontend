@@ -1,5 +1,5 @@
 import React from 'react';
-import { cycleCard } from '../../../store/actions/cardsActions';
+import { cycleCard } from '../../../store/actions/flashCardsActions';
 
 function AccuracyBtn() {
   const handleClick = () => {

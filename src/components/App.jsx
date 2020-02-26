@@ -8,7 +8,7 @@ import {
   QuizPage,
   SideBar
 } from './components';
-import { refreshCardsData } from '../store/actions/cardsActions';
+import { refreshCardsData } from '../store/actions/flashCardsActions';
 import './App.scss';
 
 function App() {

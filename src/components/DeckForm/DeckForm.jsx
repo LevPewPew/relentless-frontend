@@ -2,7 +2,8 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { SubmitBtn, MdTextEditorField } from '../components';
+import { SubmitBtn } from '../components';
+
 
 const webServer = process.env.REACT_APP_BACKEND_URL;
 
@@ -32,14 +33,8 @@ function DeckForm() {
   return (
     // TODO change these fields to be normal input and a textarea
     <form className="DeckForm" onSubmit={handleSubmit(onSubmit)}>
-      <MdTextEditorField
-        name="question"
-        register={register}
-      />
-      <MdTextEditorField
-        name="answer"
-        register={register}
-      />
+      <textarea name="question" ref={register} rows="10" cols="50" />
+      <input type="text" placeholder="answer" name="answer" ref={register} />
 
       <SubmitBtn
         text="Create Deck"

@@ -13,15 +13,29 @@
   @import '../components/AccuracyMeter/AccuracyMeter';
   @import '../components/Card/Card';
   @import '../components/CardForm/CardForm';
-  @import '../components/ui/CardSubmitBtn/CardSubmitBtn';
+  @import '../components/CardGallery/CardGallery';
+  @import '../components/CardList/CardList';
+  @import '../components/CardSummaryPanel/CardSummaryPanel';
+  @import '../components/CardSummaryPreview/CardSummaryPreview';
   @import '../components/ConfidenceMeter/ConfidenceMeter';
+  @import '../components/DeckForm/DeckForm';
   @import '../components/DeckGallery/DeckGallery';
   @import '../components/DeckList/DeckList';
+  @import '../components/DeckSummaryPanel/DeckSummaryPanel';
+  @import '../components/DeckSummaryPreview/DeckSummaryPreview';
+  @import '../components/HighlightedMarkdown/HighlightedMarkdown';
+  @import '../components/ui/SubmitBtn/SubmitBtn';
+  @import '../components/ui/MdTextEditorField/MdTextEditorField';
+  @import '../components/ui/AccuracyBtn/AccuracyBtn';
   @import '../components/layout/Footer/Footer';
   @import '../components/layout/Header/Header';
-  @import '../components/ui/MdTextEditorField/MdTextEditorField';
-  @import '../components/ui/ScoringBtn/ScoringBtn';
   @import '../components/layout/SideBar/SideBar';
+
+  // pages
+  @import '../pages/DeckViewerPage/DeckViewerPage';
+  @import '../pages/EditorPage/EditorPage';
+  @import '../pages/Homepage/Homepage';
+  @import '../pages/QuizPage/QuizPage';
 
   [class*="Page"] {
     margin: 40px 0;

@@ -4,7 +4,7 @@ import { HighlightedMarkdown } from '../components';
 
 function Card(props) {
   const { deckPosition } = props;
-  const deck = useSelector((state) => state.cardsReducer.cardsData);
+  const deck = useSelector((state) => state.flashCardsReducer.cardsData);
   const [ isFrontSide, setIsFrontSide ] = useState(true);
 
   let { question, answer } = deck[deckPosition];
