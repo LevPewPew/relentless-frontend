@@ -3,12 +3,12 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import {
   Footer,
   Header,
-  EditorPage,
+  DeckExplorerPage,
   HomePage,
   QuizPage,
   SideBar
 } from './components';
-import { refreshCardsData } from '../store/actions/flashCardsActions';
+import { refreshDecksData } from '../store/actions/flashCardsActions';
 import './App.scss';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     const getAllData = async () => {
       try {
-        await refreshCardsData();
+        await refreshDecksData();
         setIsAllDataLoaded(true);
       } catch (err) {
         console.log(err);
@@ -40,8 +40,8 @@ function App() {
               <Route path="/quiz">
                 <QuizPage />
               </Route>
-              <Route path="/editor">
-                <EditorPage />
+              <Route path="/deck_explorer">
+                <DeckExplorerPage />
               </Route>
             </Switch>
           <Footer />

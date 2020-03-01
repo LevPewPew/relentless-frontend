@@ -1,19 +1,21 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Card } from '../components';
+import { DeckSummaryPreview } from '../components';
 
 function DeckList() {
-  const deck = useSelector((state) => state.flashCardsReducer.cardsData);
+  const deck = useSelector((state) => state.flashCardsReducer.decksData);
 
   return (
     <section className="DeckList">
       {
         deck ?
-        deck.map((_, index) => {
+        deck.map((deck, index) => {
           return (
-            <Card
+            <DeckSummaryPreview
               key={index}
-              deckPosition={index}
+              index={index}
+              title={deck.title}
+              description={deck.description}
             />
           )
         }) :

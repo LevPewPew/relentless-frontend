@@ -15,7 +15,7 @@ function SideBar() {
         QUIZ LINK
       </Link>
       <Link
-        to="/editor"
+        to="/deck_explorer"
       >
         EDITOR LINK
       </Link>

@@ -6,6 +6,7 @@ import {
   DeckList
 } from '../../components/components';
 
+// TODO delete this component if ends up being vestigial
 function EditorPage() {
   return (
     <main className="EditorPage">

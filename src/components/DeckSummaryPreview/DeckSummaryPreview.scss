@@ -1,0 +1,8 @@
+.DeckSummaryPreview {
+  border: 2px dashed lightseagreen;
+  margin: 5px;
+
+  &.selected {
+    border: 2px double darkgreen;
+  }
+}

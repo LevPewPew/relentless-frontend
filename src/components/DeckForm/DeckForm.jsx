@@ -33,8 +33,8 @@ function DeckForm() {
   return (
     // TODO change these fields to be normal input and a textarea
     <form className="DeckForm" onSubmit={handleSubmit(onSubmit)}>
-      <textarea name="question" ref={register} rows="10" cols="50" />
-      <input type="text" placeholder="answer" name="answer" ref={register} />
+      <textarea name="title" ref={register} rows="10" cols="50" />
+      <input type="text" placeholder="description" name="description" ref={register} />
 
       <SubmitBtn
         text="Create Deck"
