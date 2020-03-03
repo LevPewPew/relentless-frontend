@@ -1,5 +1,8 @@
 const initialState = {
-  isCardsDisplayActive: false
+  isCardsDisplayActive: false,
+  isDeckCreatorActive: false,
+  isDeckEditorActive: false,
+  defaultValues: {}
 }
 
 function uiDisplayReducer(state = initialState, action) {
@@ -14,6 +17,12 @@ function uiDisplayReducer(state = initialState, action) {
       break;
     case 'CARDS_DISPLAY_ON':
       newState = { ...state, isCardsDisplayActive: true }
+      break;
+    case 'DECK_CREATOR_ON':
+      newState = { ...state, isDeckCreatorActive: true }
+      break;
+    case 'DECK_EDITOR_ON': //TODO put default values in here as a state??? is there better solution
+      newState = { ...state, isDeckEditorActive: true, defaultValues: action.defaultValues }
       break;
     default:
       newState = { ...state }

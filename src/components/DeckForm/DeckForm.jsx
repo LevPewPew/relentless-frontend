@@ -1,17 +1,26 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { SubmitBtn } from '../components';
-
+import { SubmitBtn } from 'components';
 
 const webServer = process.env.REACT_APP_BACKEND_URL;
 
-function DeckForm() {
+function DeckForm(props) {
+  const { defaultValues, post, put } = props;
   const dispatch = useDispatch();
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit } = useForm({ defaultValues });
 
   const onSubmit = async (data) => {
+    if (post) {
+      handlePostRequest(data);
+    } else if (put) {
+      handlePostRequest(data);
+      console.log('putted');
+    }
+  }
+
+  const handlePostRequest = async (data) => {
     const postDecksData = async (data) => {
       let res = await axios.post(`${webServer}/decks`, data);
       

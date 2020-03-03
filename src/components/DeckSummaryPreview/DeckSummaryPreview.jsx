@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { setCurrentDeck, setCurrentDeckIndex } from '../../store/actions/flashCardsActions';
-import { turnOnCardsDisplay } from '../../store/actions/uiDisplayActions';
+import { turnOnCardsDisplay, turnOnDeckEditor } from '../../store/actions/uiDisplayActions';
 import { useSelector } from 'react-redux';
 
 function DeckSummaryPreview(props) {
@@ -8,10 +8,16 @@ function DeckSummaryPreview(props) {
   const { index, title, description } = props;
   const [ isSelected, setIsSelected ] = useState(false);
 
+  const defaultValues = {
+    title:'test1',
+    description: 'foobar'
+  }
+
   const handleComponentClick = () => {
     setCurrentDeck(index);
     setCurrentDeckIndex(index);
     turnOnCardsDisplay();
+    turnOnDeckEditor(defaultValues);
   }
 
   useEffect(() => {
