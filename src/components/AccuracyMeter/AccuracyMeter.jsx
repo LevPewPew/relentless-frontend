@@ -1,5 +1,5 @@
 import React from 'react';
-import { AccuracyBtn } from '../components';
+import { AccuracyBtn } from 'components';
 
 function AccuracyMeter() {
   return (

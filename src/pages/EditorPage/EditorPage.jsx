@@ -4,7 +4,7 @@ import {
   CardList,
   DeckForm,
   DeckList
-} from '../../components/components';
+} from 'components';
 
 // TODO delete this component if ends up being vestigial
 function EditorPage() {

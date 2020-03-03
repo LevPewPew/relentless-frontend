@@ -7,7 +7,7 @@ import {
   HomePage,
   QuizPage,
   SideBar
-} from './components';
+} from 'components';
 import { refreshDecksData } from '../store/actions/flashCardsActions';
 import './App.scss';
 

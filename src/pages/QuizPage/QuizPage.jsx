@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { AccuracyMeter, Card } from '../../components/components';
+import { AccuracyMeter, Card } from 'components';
 
 function QuizPage() {
   const deckPosition = useSelector((state) => state.flashCardsReducer.deckPosition);

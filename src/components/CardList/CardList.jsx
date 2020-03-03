@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { CardSummaryPreview } from '../components';
+import { CardSummaryPreview } from 'components';
 
 function CardList() {
   const cards = useSelector((state) => state.flashCardsReducer.currentDeck.cards);

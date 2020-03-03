@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { HighlightedMarkdown } from '../components';
+import { HighlightedMarkdown } from 'components';
 
 function Card(props) {
   const { deckPosition } = props;

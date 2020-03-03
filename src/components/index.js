@@ -6,6 +6,7 @@ import QuizPage from '../pages/QuizPage/QuizPage';
 // components
 import AccuracyBtn from './ui/AccuracyBtn/AccuracyBtn';
 import AccuracyMeter from './AccuracyMeter/AccuracyMeter';
+import App from './App'
 import Card from './Card/Card';
 import CardForm from './CardForm/CardForm';
 import CardGallery from './CardGallery/CardGallery';
@@ -35,6 +36,7 @@ export {
   // components
   AccuracyBtn,
   AccuracyMeter,
+  App,
   Card,
   CardForm,
   CardGallery,

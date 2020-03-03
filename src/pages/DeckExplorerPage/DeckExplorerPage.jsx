@@ -5,7 +5,7 @@ import {
   CardList,
   DeckForm,
   DeckList
-} from '../../components/components';
+} from 'components';
 
 function DeckExplorerPage() {
   const isCardsDisplayActive = useSelector((state) => state.uiDisplayReducer.isCardsDisplayActive);

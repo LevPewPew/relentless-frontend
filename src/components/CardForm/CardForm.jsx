@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { SubmitBtn, MdTextEditorField } from '../components';
+import { SubmitBtn, MdTextEditorField } from 'components';
 
 const webServer = process.env.REACT_APP_BACKEND_URL;
 
