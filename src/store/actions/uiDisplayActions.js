@@ -16,6 +16,10 @@ const turnOnDeckCreator = () => {
   store.dispatch({ type: 'DECK_CREATOR_ON' })
 }
 
+const turnOffDeckEditor = () => {
+  store.dispatch({ type: 'DECK_EDITOR_OFF' })
+}
+
 const turnOnDeckEditor = (defaultValues) => {
   store.dispatch({ type: 'DECK_EDITOR_ON', defaultValues })
 }
@@ -25,5 +29,6 @@ export {
   turnOffCardsDisplay,
   turnOnCardsDisplay,
   turnOnDeckCreator,
+  turnOffDeckEditor,
   turnOnDeckEditor
 }

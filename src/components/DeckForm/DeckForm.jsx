@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
@@ -10,9 +10,7 @@ function DeckForm(props) {
   const { post, put } = props;
   const defaultValues = useSelector((state) => state.uiDisplayReducer.defaultValues);
   const dispatch = useDispatch();
-  console.log(defaultValues);
-  
-  const { register, handleSubmit } = useForm({ defaultValues });
+  const { register, handleSubmit, reset } = useForm({ defaultValues });
 
   const onSubmit = async (data) => {
     if (post) {
@@ -41,6 +39,10 @@ function DeckForm(props) {
       console.log(err);
     }
   }
+
+  useEffect(() => {
+    reset(defaultValues);
+  }, [defaultValues])
 
   return (
     // TODO change these fields to be normal input and a textarea

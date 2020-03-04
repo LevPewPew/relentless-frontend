@@ -5,19 +5,18 @@ import { useSelector } from 'react-redux';
 
 function DeckSummaryPreview(props) {
   const currentDeckIndex = useSelector((state) => state.flashCardsReducer.currentDeckIndex);
+  const decksData = useSelector((state) => state.flashCardsReducer.decksData);
   const { index, title, description } = props;
   const [ isSelected, setIsSelected ] = useState(false);
 
-  const defaultValues = {
-    title:'test1',
-    description: 'foobar'
-  }
+  const defaultValues = decksData[index];
 
   const handleComponentClick = () => {
     setCurrentDeck(index);
     setCurrentDeckIndex(index);
     turnOnCardsDisplay();
     turnOnDeckEditor(defaultValues);
+    console.log(defaultValues);
   }
 
   useEffect(() => {
