@@ -30,7 +30,7 @@ function DeckExplorerPage() {
         <DeckForm put/> :
         null
       }
-      {/* <CardForm /> */}
+      <CardForm />
     </main>
   )
 }
