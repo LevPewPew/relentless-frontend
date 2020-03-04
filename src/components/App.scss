@@ -36,8 +36,19 @@
   @import '../pages/EditorPage/EditorPage';
   @import '../pages/Homepage/Homepage';
   @import '../pages/QuizPage/QuizPage';
-
+  
   [class*="Page"] {
-    margin: 40px 0;
+    padding: 40px;
+    background-color: $unyieldingLamp;
+  }
+
+  .sidebar-page-grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+  }
+
+  .page-foot-flex {
+    display: flex;
+    flex-direction: column;
   }
 }

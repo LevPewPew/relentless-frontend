@@ -32,19 +32,23 @@ function App() {
       <div className="App">
         <BrowserRouter>
           <Header />
-          <SideBar />
-            <Switch>
-              <Route exact path="/">
-                <HomePage />
-              </Route>
-              <Route path="/quiz">
-                <QuizPage />
-              </Route>
-              <Route path="/deck_explorer">
-                <DeckExplorerPage />
-              </Route>
-            </Switch>
-          <Footer />
+          <div className="sidebar-page-grid">
+            <SideBar />
+            <div className="page-foot-flex">
+              <Switch>
+                <Route exact path="/">
+                  <HomePage />
+                </Route>
+                <Route path="/quiz">
+                  <QuizPage />
+                </Route>
+                <Route path="/deck_explorer">
+                  <DeckExplorerPage />
+                </Route>
+              </Switch>
+              <Footer />
+            </div>
+          </div>
         </BrowserRouter>
       </div>
     );

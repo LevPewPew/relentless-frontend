@@ -6,10 +6,15 @@ h3,
 h4,
 h5,
 h6 {
+  margin: 0;
   font-family: $headings;
 }
 
 p,
 li {
   font-family: $general;
+}
+
+a {
+  text-decoration: none;
 }

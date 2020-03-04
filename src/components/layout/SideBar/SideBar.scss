@@ -1,3 +1,10 @@
 .SideBar {
-  border: 3px dashed yellow;
+  display: flex;
+  flex-direction: column;
+  background-color: $unstoppableForce;
+
+  a {
+    margin: 10px;
+    color: $tenaciousBench;
+  }
 }

@@ -1,8 +1,11 @@
 .DeckSummaryPreview {
-  border: 2px dashed lightseagreen;
-  margin: 5px;
+  padding: 1em;
+  border: 1px double $tenaciousBench;
+  background-color: $immovableObject;
+  color: $tenaciousBench;
+  font-family: $general;
 
   &.selected {
-    border: 2px double darkgreen;
+    border: 5px solid $unstoppableForce;
   }
 }
