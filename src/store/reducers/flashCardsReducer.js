@@ -1,7 +1,7 @@
 const initialState = {
   isDecksDataLoaded: false,
   decksData: [],
-  currentDeck: [],
+  currentDeck: {},
   currentDeckIndex: 0
 };
 

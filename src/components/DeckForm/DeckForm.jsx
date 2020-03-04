@@ -10,7 +10,7 @@ function DeckForm(props) {
   const { post, put } = props;
   const defaultValues = useSelector((state) => state.uiDisplayReducer.defaultValues);
   const dispatch = useDispatch();
-  const { register, handleSubmit, reset } = useForm({ defaultValues });
+  const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = async (data) => {
     if (post) {

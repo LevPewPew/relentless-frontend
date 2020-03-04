@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { SubmitBtn, MdTextEditorField } from 'components';
@@ -7,6 +7,7 @@ import { SubmitBtn, MdTextEditorField } from 'components';
 const webServer = process.env.REACT_APP_BACKEND_URL;
 
 function CardForm() {
+  const deckId = useSelector((state) => state.flashCardsReducer.currentDeck._id);
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
 
@@ -39,6 +40,7 @@ function CardForm() {
         name="answer"
         register={register}
       />
+      <input type="text" name="deckId" ref={register} value={deckId || ''} hidden readOnly/>
 
       <SubmitBtn
         text="Add Card"
