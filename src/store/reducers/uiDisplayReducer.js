@@ -21,7 +21,7 @@ function uiDisplayReducer(state = initialState, action) {
     case 'DECK_CREATOR_ON':
       newState = { ...state, isDeckCreatorActive: true }
       break;
-    case 'DECK_EDITOR_ON': //TODO put default values in here as a state??? is there better solution
+    case 'DECK_EDITOR_ON':
       newState = { ...state, isDeckEditorActive: true, defaultValues: action.defaultValues }
       break;
     default:

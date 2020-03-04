@@ -7,8 +7,11 @@ import { SubmitBtn } from 'components';
 const webServer = process.env.REACT_APP_BACKEND_URL;
 
 function DeckForm(props) {
-  const { defaultValues, post, put } = props;
+  const { post, put } = props;
+  const defaultValues = useSelector((state) => state.uiDisplayReducer.defaultValues);
   const dispatch = useDispatch();
+  console.log(defaultValues);
+  
   const { register, handleSubmit } = useForm({ defaultValues });
 
   const onSubmit = async (data) => {
